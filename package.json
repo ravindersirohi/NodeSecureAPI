@@ -1,0 +1,24 @@
+{
+  "name": "nodesecureapi",
+  "version": "1.0.0",
+  "description": "Restful secure API with Nodejs, express and jwt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravindersirohi/NodeSecureAPI.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "jwt",
+    "express"
+  ],
+  "author": "Ravinder Sirohi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravindersirohi/NodeSecureAPI/issues"
+  },
+  "homepage": "https://github.com/ravindersirohi/NodeSecureAPI#readme"
+}
