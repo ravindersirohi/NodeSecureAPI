@@ -9,7 +9,11 @@ routes.get('/', (req, resp, next) => {
         "email": "test@domain.com"
     });
 });
-routes.post('/', validateToken, (req, resp) => {
+routes.post('/', validateToken, (req, resp, next) => {
+    resp.json({
+        message: 'Success',
+        body: req.body
+    });
     resp.end;
 });
 routes.post('/login', (req, resp, next) => {
@@ -34,12 +38,13 @@ function validateToken(req, resp, next) {
         const bearer = authHeader.split(' ');
         const token = bearer[1];
         req.token = token;
-        jwt.verify(req.token, keys.secureKey, (error, authData) => {
+        jwt.verify(req.token, keys.secureKey, { expiresIn: keys.expiresIn }, (error, authData) => {
             if (error)
                 resp.status(403).send('Authorization Failed!');
-            else
-                resp.json(authData)
-            next();
+            else {
+                console.log(authData);
+                next();
+            }
         });
     }
 }
