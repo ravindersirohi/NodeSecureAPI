@@ -1,5 +1,5 @@
-# Node API
-Restful API implementation using NodeJS, Express and JsonWebToken to demonstrate how JWT token secure an endpoints.
+# Node / Express API
+Restful API implementation with NodeJS, Express and JsonWebToken, to demonstrate how JWT token secure restful API endpoint.
 
 # GET Endpoint (Unsecure)
 http://localhost:3002/profile, this endpoint return input json object to jet JWT token.
